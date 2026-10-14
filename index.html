@@ -1,0 +1,412 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio - ชื่อของคุณ</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: #f0f4f8;
+      color: #1e293b;
+    }
+
+    /* Navigation */
+    nav {
+      background: #0f172a;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      color: #818cf8;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    nav ul li a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e1b4b);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #6366f1;
+      margin-bottom: 20px;
+      box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .hero .tagline {
+      color: #818cf8;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      padding: 12px 24px;
+      background: #6366f1;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #4f46e5;
+    }
+
+    /* Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Section */
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .about-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #475569;
+    }
+
+    /* Skills */
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-badge {
+      background: #6366f1;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Projects */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      transition: 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card h3 {
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    .contact p {
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: #6366f1;
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #64748b;
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+
+      nav {
+        padding: 14px 16px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 60px 15px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero .tagline {
+        font-size: 16px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">🎓 [ชื่อย่อ]</div>
+
+    <ul>
+      <li><a href="#about">เกี่ยวกับ</a></li>
+      <li><a href="#skills">ทักษะ</a></li>
+      <li><a href="#projects">ผลงาน</a></li>
+      <li><a href="#contact">ติดต่อ</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <img
+      class="avatar"
+      src="https://api.dicebear.com/7.x/avataaars/svg?seed=student"
+      alt="Profile">
+
+    <h1>สวัสดีครับ ผม [ชื่อ-นามสกุล] 👋</h1>
+
+    <p class="tagline">
+      นักศึกษา IT · Web Developer มือใหม่
+    </p>
+
+    <div class="hero-btns">
+      <a class="btn-primary" href="#projects">
+        ดูผลงาน
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- Content -->
+  <div class="container">
+
+    <!-- About -->
+    <section id="about">
+
+      <h2 class="section-title">
+        เกี่ยวกับฉัน
+      </h2>
+
+      <p class="about-text">
+        สวัสดีครับ/ค่ะ ผม/หนู [ชื่อ]
+        กำลังศึกษาที่ [ชื่อสถาบัน]
+        สาขา [สาขา] ชั้นปีที่ [ปี]
+        มีความสนใจด้านการพัฒนาเว็บไซต์
+        และเทคโนโลยีสารสนเทศ
+      </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+      <h2 class="section-title">
+        ทักษะ
+      </h2>
+
+      <div class="skills-wrap">
+
+        <span class="skill-badge">HTML5</span>
+
+        <span class="skill-badge">CSS3</span>
+
+        <span class="skill-badge">Flexbox</span>
+
+        <span class="skill-badge">JavaScript</span>
+
+        <span class="skill-badge">XAMPP</span>
+
+        <span class="skill-badge">
+          [ทักษะของคุณ]
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+      <h2 class="section-title">
+        ผลงาน
+      </h2>
+
+      <div class="card-grid">
+
+        <div class="project-card">
+
+          <h3>
+            🌐 Portfolio Website
+          </h3>
+
+          <p>
+            เว็บไซต์ Portfolio ส่วนตัว
+            สร้างด้วย HTML5 และ CSS
+          </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <h3>
+            📝 [Project ของคุณ]
+          </h3>
+
+          <p>
+            ใส่รายละเอียดเกี่ยวกับ
+            Project ที่คุณสร้างที่นี่
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+      <h2 class="section-title">
+        ติดต่อฉัน
+      </h2>
+
+      <p>
+        📧 Email:
+        <a href="mailto:your@email.com">
+          your@email.com
+        </a>
+      </p>
+
+      <p>
+        📱 Line ID:
+        [Line ID ของคุณ]
+      </p>
+
+      <p>
+        💻 GitHub:
+        <a href="https://github.com" target="_blank">
+          GitHub ของฉัน
+        </a>
+      </p>
+
+    </section>
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <p>
+      © 2026 [ชื่อของคุณ]
+      สร้างด้วย ❤️ และ HTML/CSS
+    </p>
+
+  </footer>
+
+</body>
+</html>
+```
