@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portfolio - นายภูธิป ธรรมรักษ์</title>
-  <meta name="description" content="เว็บไซต์ Portfolio ของนายภูธิป ธรรมรักษ์ นักศึกษาสาขาคอมพิวเตอร์ศึกษา">
+  <title>Portfolio - ภูธิป ธรรมรักษ์</title>
+  <meta name="description" content="Portfolio ของนายภูธิป ธรรมรักษ์ นักศึกษาสาขาคอมพิวเตอร์ศึกษา">
 
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -19,7 +19,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 85px;
     }
 
     body {
@@ -29,7 +29,11 @@
       line-height: 1.7;
     }
 
-    /* เมนูด้านบน */
+    a {
+      color: inherit;
+    }
+
+    /* Navigation */
     nav {
       background: #ffffff;
       padding: 16px 7%;
@@ -47,12 +51,14 @@
       color: #1686d9;
       font-size: 22px;
       font-weight: 800;
+      white-space: nowrap;
     }
 
     nav ul {
       display: flex;
       list-style: none;
       gap: 24px;
+      flex-wrap: wrap;
     }
 
     nav ul a {
@@ -67,7 +73,7 @@
       color: #1686d9;
     }
 
-    /* ส่วนแนะนำตัว */
+    /* Hero */
     .hero {
       background: linear-gradient(135deg, #dbeafe, #ffffff, #e0f2fe);
       text-align: center;
@@ -79,6 +85,7 @@
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
+      object-position: center;
       border: 5px solid #ffffff;
       box-shadow: 0 8px 28px rgba(22, 134, 217, 0.2);
       margin-bottom: 22px;
@@ -137,7 +144,7 @@
       transform: translateY(-2px);
     }
 
-    /* เนื้อหาหลัก */
+    /* Main content */
     .container {
       max-width: 960px;
       margin: 0 auto;
@@ -157,7 +164,7 @@
       border-bottom: 2px solid #d9eaf8;
     }
 
-    /* เกี่ยวกับฉัน */
+    /* About */
     .about-card {
       background: #ffffff;
       border: 1px solid #e0edf8;
@@ -171,11 +178,15 @@
       margin-bottom: 10px;
     }
 
+    .about-card p:last-child {
+      margin-bottom: 0;
+    }
+
     .about-card strong {
       color: #245b89;
     }
 
-    /* ทักษะ */
+    /* Skills */
     .skills-wrap {
       display: flex;
       flex-wrap: wrap;
@@ -192,7 +203,7 @@
       font-weight: 700;
     }
 
-    /* ผลงาน */
+    /* Projects */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -234,7 +245,7 @@
       font-size: 15px;
     }
 
-    /* ติดต่อ */
+    /* Contact */
     .contact-card {
       background: #ffffff;
       border: 1px solid #e0edf8;
@@ -243,7 +254,7 @@
       color: #52657a;
     }
 
-    /* ท้ายเว็บไซต์ */
+    /* Footer */
     footer {
       background: #173b63;
       color: #e0f2fe;
@@ -252,7 +263,7 @@
       font-size: 14px;
     }
 
-    /* รองรับมือถือ */
+    /* Responsive */
     @media (max-width: 600px) {
       nav {
         padding: 14px 16px;
@@ -263,7 +274,6 @@
       nav ul {
         justify-content: center;
         gap: 10px 18px;
-        flex-wrap: wrap;
       }
 
       nav ul a {
@@ -305,7 +315,7 @@
 
 <body>
 
-  <!-- เมนู -->
+  <!-- Navigation -->
   <nav>
     <div class="logo">🎓 ภูธิป</div>
 
@@ -317,12 +327,12 @@
     </ul>
   </nav>
 
-  <!-- แนะนำตัว -->
+  <!-- Profile -->
   <header class="hero">
 
     <img
       class="avatar"
-      src="วางลิงก์ตรงจาก-Postimages-ตรงนี้"
+      src="https://i.postimg.cc/KYWvwTCB/448763884-1870391856776734-4026332838454102891-n.jpg"
       alt="รูปโปรไฟล์ของภูธิป"
       onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='grid';">
 
@@ -347,10 +357,10 @@
 
   </header>
 
-  <!-- เนื้อหาหลัก -->
+  <!-- Main -->
   <main class="container">
 
-    <!-- เกี่ยวกับฉัน -->
+    <!-- About -->
     <section class="section" id="about">
       <h2 class="section-title">👨‍🎓 เกี่ยวกับฉัน</h2>
 
@@ -360,11 +370,11 @@
         <p><strong>สถานศึกษา:</strong> มหาวิทยาลัยราชภัฏมหาสารคาม</p>
         <p><strong>สาขาวิชา:</strong> คอมพิวเตอร์ศึกษา</p>
         <p><strong>ชั้นปี:</strong> ปีที่ 3</p>
-        <p><strong>งานอดิเรก/ความชอบ:</strong> ชอบแมวครับ 🐱</p>
+        <p><strong>ความชอบ:</strong> ชอบแมวครับ 🐱</p>
       </div>
     </section>
 
-    <!-- ทักษะ -->
+    <!-- Skills -->
     <section class="section" id="skills">
       <h2 class="section-title">💻 ทักษะของฉัน</h2>
 
@@ -375,12 +385,11 @@
       </div>
     </section>
 
-    <!-- ผลงาน -->
+    <!-- Projects -->
     <section class="section" id="projects">
       <h2 class="section-title">🚀 ผลงานของฉัน</h2>
 
       <div class="project-grid">
-
         <article class="project-card">
           <div class="project-icon">🌐</div>
 
@@ -388,25 +397,24 @@
 
           <p>
             เว็บไซต์แนะนำตัวและนำเสนอข้อมูลส่วนตัว
-            ออกแบบด้วย HTML5 และ CSS3
+            สร้างด้วย HTML5 และ CSS3
           </p>
         </article>
-
       </div>
     </section>
 
-    <!-- ติดต่อ -->
+    <!-- Contact -->
     <section class="section" id="contact">
       <h2 class="section-title">📬 ติดต่อฉัน</h2>
 
       <div class="contact-card">
-        <p>ขณะนี้ยังไม่ได้ระบุช่องทางติดต่อ</p>
+        <p>ยังไม่ได้ระบุช่องทางติดต่อ</p>
       </div>
     </section>
 
   </main>
 
-  <!-- ท้ายเว็บไซต์ -->
+  <!-- Footer -->
   <footer>
     <p>© 2026 นายภูธิป ธรรมรักษ์</p>
     <p>สร้างด้วย HTML5 และ CSS3 💙</p>
